@@ -24,4 +24,9 @@ environment.plugins.prepend(
   new VueLoaderPlugin()
 )
 
+environment.loaders.prepend('vue', {
+  test: /\.vue$/,
+  use: [{ loader: 'vue-loader' }]
+})
+
 module.exports = environment
