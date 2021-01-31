@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_31_012015) do
+ActiveRecord::Schema.define(version: 2021_01_31_015122) do
 
   create_table "widgets", force: :cascade do |t|
-    t.string "model"
-    t.integer "size"
+    t.string "style"
+    t.string "color"
     t.boolean "runcible"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -14,9 +14,9 @@ class WidgetsTest < ApplicationSystemTestCase
     visit widgets_url
     click_on "New Widget"
 
-    fill_in "Model", with: @widget.model
+    fill_in "Color", with: @widget.color
     check "Runcible" if @widget.runcible
-    fill_in "Size", with: @widget.size
+    fill_in "Style", with: @widget.style
     click_on "Create Widget"
 
     assert_text "Widget was successfully created"
@@ -27,9 +27,9 @@ class WidgetsTest < ApplicationSystemTestCase
     visit widgets_url
     click_on "Edit", match: :first
 
-    fill_in "Model", with: @widget.model
+    fill_in "Color", with: @widget.color
     check "Runcible" if @widget.runcible
-    fill_in "Size", with: @widget.size
+    fill_in "Style", with: @widget.style
     click_on "Update Widget"
 
     assert_text "Widget was successfully updated"

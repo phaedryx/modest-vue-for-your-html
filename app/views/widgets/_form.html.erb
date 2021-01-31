@@ -1,3 +1,4 @@
+<div data-component="Widget">
 <%= form_with(model: widget) do |form| %>
   <% if widget.errors.any? %>
     <div id="error_explanation">
@@ -12,13 +13,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :model %>
-    <%= form.text_field :model %>
+    <%= form.label :style %>
+    <%= form.text_field :style %>
   </div>
 
   <div class="field">
-    <%= form.label :size %>
-    <%= form.number_field :size %>
+    <%= form.label :color %>
+    <%= form.text_field :color %>
   </div>
 
   <div class="field">
@@ -30,3 +31,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>

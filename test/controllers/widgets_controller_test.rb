@@ -17,7 +17,7 @@ class WidgetsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create widget" do
     assert_difference('Widget.count') do
-      post widgets_url, params: { widget: { model: @widget.model, runcible: @widget.runcible, size: @widget.size } }
+      post widgets_url, params: { widget: { color: @widget.color, runcible: @widget.runcible, style: @widget.style } }
     end
 
     assert_redirected_to widget_url(Widget.last)
@@ -34,7 +34,7 @@ class WidgetsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update widget" do
-    patch widget_url(@widget), params: { widget: { model: @widget.model, runcible: @widget.runcible, size: @widget.size } }
+    patch widget_url(@widget), params: { widget: { color: @widget.color, runcible: @widget.runcible, style: @widget.style } }
     assert_redirected_to widget_url(@widget)
   end
 
